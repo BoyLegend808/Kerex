@@ -7,7 +7,8 @@
   <meta name="description"
     content="Kerex Nigeria Limited - World-class manpower solutions and technical services for the oil & gas industry.">
   <title>Kerex Nigeria Limited - Oil & Gas HR Solutions</title>
-  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="icon" type="image/png" href="./kerex logo.png">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span>☰</span>
         </button>
-        <a href="#home" class="logo">KEREX</a>
+        <a href="#home" class="logo"><img src="Kerex Company Logo.png" alt="Kerex Company Logo"></a>
       </div>
 
       <nav class="main-nav" aria-label="Main navigation">
@@ -29,8 +30,8 @@
       </nav>
 
       <div class="header-actions">
-        <button class="btn-icon" aria-label="Support">?</button>
-        <a href="#contact" class="btn-primary">Contact Us</a>
+        <button class="btn-icon modal-trigger" data-modal="support-modal" aria-label="Support">?</button>
+        <button class="btn-primary btn-contact modal-trigger" data-modal="contact-modal" aria-label="Contact Us"></button>
       </div>
     </div>
 
@@ -39,7 +40,6 @@
       <a href="#about">Manpower Resources</a>
       <a href="#services">Technical Services</a>
       <a href="#jobs">Job Board</a>
-      <a href="#contact" class="btn-primary">Contact Us</a>
     </nav>
   </header>
 
@@ -47,9 +47,11 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-bg">
-        <img
-          src="https://lh3.googleusercontent.com/aida/ADBb0uiw5HEhAI-0kLPq0fK5QeqezHWo-og4AM-aQKxvrmh5OHGvS7W50Bm_X8V3wFcpRSIuKpG3e4GBSI2cQeqYz4kfykcYuaXzx8oxy81noozmvjBlI31tfIc-6AWxasJlYfcHSt8qWqYM1tfxtZHyp9M8WI6XX3YvMG_TFgl7jlQTexvQHUVUJo-VCudfmoI9R_aYSH_QQ0I7LPmsuNBbInWOeBnR9V9VmrSA382p712N08tuRUZ8UgfnBv8"
-          alt="Team of professionals">
+        <div class="glare-container">
+          <img
+            src="1fc89eb4-7ace-4268-ab00-b2b22810585e_removalai_preview.png"
+            alt="Kerex Nigeria Limited team of professionals giving thumbs up">
+        </div>
         <div class="hero-overlay"></div>
       </div>
 
@@ -68,6 +70,7 @@
 
     <!-- About Section -->
     <section id="about" class="section section-about">
+      <div class="terminal-bg"></div>
       <div class="container about-grid">
         <article>
           <span class="section-label">About Kerex</span>
@@ -91,11 +94,28 @@
 
           <article class="bento-card bento-values reveal">
             <h3>Our Core Values</h3>
-            <ul class="values-list">
-              <li><span class="icon">🤝</span> Integrity</li>
-              <li><span class="icon">⚙️</span> Excellence</li>
-              <li><span class="icon">🔒</span> Reliability</li>
-            </ul>
+            <div class="values-grid">
+              <div class="value-item">
+                <div class="value-icon">🤝</div>
+                <h4>Integrity</h4>
+                <p>We uphold the highest ethical standards in all our dealings, fostering trust with clients and partners.</p>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">⚙️</div>
+                <h4>Excellence</h4>
+                <p>We deliver superior quality services through continuous improvement and professional expertise.</p>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">🔒</div>
+                <h4>Reliability</h4>
+                <p>We consistently meet commitments and exceed expectations in the oil & gas sector.</p>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">👥</div>
+                <h4>People-First</h4>
+                <p>Our employees are our greatest asset; we prioritize their well-being and professional growth.</p>
+              </div>
+            </div>
           </article>
         </aside>
       </div>
@@ -160,14 +180,87 @@
 
     <!-- Clients Section -->
     <section class="section section-clients">
+      <div class="terminal-bg"></div>
       <div class="container">
         <h2 id="clients-heading">Trusted by Industry Titans</h2>
-        <ul class="clients-grid">
-          <li><span class="client-logo">OVH ENERGY</span></li>
-          <li><span class="client-logo">BAKER HUGHES</span></li>
-          <li><span class="client-logo">OES ENERGY</span></li>
-          <li><span class="client-logo">TOTAL</span></li>
-        </ul>
+        <div class="clients-scroll">
+          <div class="clients-grid">
+            <a href="https://www.heliosinvestment.com/investments/ovh-energy" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OVH.png" alt="OVH Energy"></a>
+            <a href="https://www.bakerhughes.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./Baker.png" alt="Baker Hughes"></a>
+            <a href="https://oesenergy.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OES.png" alt="OES Energy"></a>
+            <a href="https://totalenergies.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./logo_totalenergies.webp" alt="TotalEnergies"></a>
+            <a href="https://www.heliosinvestment.com/investments/ovh-energy" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OVH.png" alt="OVH Energy"></a>
+            <a href="https://www.bakerhughes.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./Baker.png" alt="Baker Hughes"></a>
+            <a href="https://oesenergy.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OES.png" alt="OES Energy"></a>
+            <a href="https://totalenergies.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./logo_totalenergies.webp" alt="TotalEnergies"></a>
+            <a href="https://www.heliosinvestment.com/investments/ovh-energy" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OVH.png" alt="OVH Energy"></a>
+            <a href="https://www.bakerhughes.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./Baker.png" alt="Baker Hughes"></a>
+            <a href="https://oesenergy.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OES.png" alt="OES Energy"></a>
+            <a href="https://totalenergies.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./logo_totalenergies.webp" alt="TotalEnergies"></a>
+            <a href="https://www.heliosinvestment.com/investments/ovh-energy" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OVH.png" alt="OVH Energy"></a>
+            <a href="https://www.bakerhughes.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./Baker.png" alt="Baker Hughes"></a>
+            <a href="https://oesenergy.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./OES.png" alt="OES Energy"></a>
+            <a href="https://totalenergies.com/" target="_blank" rel="noopener noreferrer" class="client-logo"><img src="./logo_totalenergies.webp" alt="TotalEnergies"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Board Section -->
+    <section id="jobs" class="section section-jobs">
+      <div class="container">
+        <span class="section-label">Careers</span>
+        <h2 class="reveal">Join Our Team</h2>
+        <p class="reveal">Explore exciting opportunities in the oil and gas industry with Kerex Nigeria Limited.</p>
+        
+        <div class="jobs-grid reveal">
+          <article class="job-card">
+            <h3>HR Specialist</h3>
+            <p class="job-location">Lagos, Nigeria</p>
+            <p class="job-description">Manage recruitment and talent acquisition for oil & gas sector clients.</p>
+            <a href="mailto:careers@kerex.ng?subject=HR Specialist Application" class="btn-primary">Apply Now</a>
+          </article>
+          
+          <article class="job-card">
+            <h3>Technical Advisor</h3>
+            <p class="job-location">Port Harcourt, Nigeria</p>
+            <p class="job-description">Provide technical expertise and support for drilling operations.</p>
+            <a href="mailto:careers@kerex.ng?subject=Technical Advisor Application" class="btn-primary">Apply Now</a>
+          </article>
+          
+          <article class="job-card">
+            <h3>Safety Officer</h3>
+            <p class="job-location">Abuja, Nigeria</p>
+            <p class="job-description">Ensure compliance with HSE standards across all operations.</p>
+            <a href="mailto:careers@kerex.ng?subject=Safety Officer Application" class="btn-primary">Apply Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Training Section -->
+    <section id="training" class="section section-training">
+      <div class="container">
+        <span class="section-label">Training</span>
+        <h2 class="reveal">Technical Training Programs</h2>
+        <p class="reveal">Enhance your skills with our industry-certified training programs.</p>
+        
+        <div class="training-grid reveal">
+          <article class="training-card">
+            <h3><span class="icon">🛢️</span> Oil & Gas Fundamentals</h3>
+            <p>Comprehensive introduction to upstream and downstream operations.</p>
+          </article>
+          
+          <article class="training-card">
+            <h3><span class="icon">⚠️</span> HSE Certification</h3>
+            <p>Health, Safety, and Environment compliance training.</p>
+          </article>
+          
+          <article class="training-card">
+            <h3><span class="icon">🔧</span> Technical Skills</h3>
+            <p>Specialized technical training for field operations.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -178,12 +271,11 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="logo">KEREX</span>
-          <p>Kerex Nigeria Limited is committed to providing excellent and qualitative services in the oil and gas
-            energy sectors.</p>
+          <p>For 15+ years, Kerex Nigeria Limited has been West Africa's trusted HR partner for the oil & gas industry. DPR and NIPEX certified, we deliver world-class manpower solutions, technical services, and workforce management for onshore and offshore operations. Our commitment to excellence and integrity makes us the preferred choice for industry leaders.</p>
           <nav class="social-links" aria-label="Social media">
-            <a href="#" aria-label="Website">🌐</a>
+            <a href="https://www.linkedin.com/company/kerex-nigeria-limited" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">🌐</a>
             <a href="mailto:info@kerex.ng" aria-label="Email">✉️</a>
-            <a href="#" aria-label="Location">📍</a>
+            <a href="https://twitter.com/kerexng" target="_blank" rel="noopener noreferrer" aria-label="Twitter">🐦</a>
           </nav>
         </div>
 
@@ -194,15 +286,16 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#jobs">Job Board</a></li>
             <li><a href="#training">Technical Training</a></li>
+            <li><a href="tel:+234800KEREXNG">📞 +234-800-KEREX-NG</a></li>
           </ul>
         </nav>
 
         <nav class="footer-col">
           <h3>Corporate</h3>
           <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
-            <li><a href="#whistleblowing">Whistleblowing Policy</a></li>
+            <li><button class="modal-trigger" data-modal="privacy-modal">Privacy Policy</button></li>
+            <li><button class="modal-trigger" data-modal="terms-modal">Terms of Service</button></li>
+            <li><button class="modal-trigger" data-modal="whistleblowing-modal">Whistleblowing Policy</button></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </nav>
@@ -210,18 +303,234 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Kerex Nigeria Limited. Reliability in HR.</p>
-        <p class="footer-phone">📞 +234-800-KEREX-NG</p>
       </div>
     </div>
   </footer>
 
   <!-- Job FAB (Floating Action Button) -->
-  <a id="jobs" href="#jobs" class="job-fab" aria-label="Find a job" title="Find a Job">
+  <a href="#jobs" class="job-fab" aria-label="Find a job" title="Find a Job">
     <span>💼</span>
     <span class="job-fab-label">Find a Job</span>
   </a>
 
-  <script src="./src/script.js"></script>
+  <!-- Modal Dialogs -->
+  <dialog id="privacy-modal" class="modal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2>Privacy Policy</h2>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </header>
+      <div class="modal-body">
+        <p><strong>Last Updated: January 2026</strong></p>
+        <p>Kerex Nigeria Limited is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data in compliance with Nigerian Data Protection Regulations.</p>
+        
+        <h3>Information We Collect</h3>
+        <p>We collect information you provide directly, including:</p>
+        <ul>
+          <li>Contact details (name, email, phone number)</li>
+          <li>Employment history and professional qualifications</li>
+          <li>Educational background and certifications</li>
+          <li>Resume/CV and cover letters</li>
+          <li>Background check information (with consent)</li>
+        </ul>
+        
+        <h3>How We Use Your Information</h3>
+        <p>Your information is used solely for:</p>
+        <ul>
+          <li>Recruitment and talent acquisition for oil & gas sector clients</li>
+          <li>Service delivery and workforce management</li>
+          <li>Compliance with DPR, NIPEX, and regulatory requirements</li>
+          <li>Training and professional development programs</li>
+          <li>Payroll, pension, and welfare administration</li>
+        </ul>
+        
+        <h3>Data Protection</h3>
+        <p>We implement industry-standard security measures including:</p>
+        <ul>
+          <li>Secure storage systems with access controls</li>
+          <li>Encryption of sensitive data</li>
+          <li>Regular security audits and compliance checks</li>
+          <li>Staff training on data protection best practices</li>
+        </ul>
+        
+        <h3>Your Rights</h3>
+        <p>You have the right to access, correct, or delete your personal data. Contact us at <a href="mailto:privacy@kerex.ng">privacy@kerex.ng</a> for any privacy-related inquiries.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="terms-modal" class="modal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2>Terms of Service</h2>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </header>
+      <div class="modal-body">
+        <p><strong>Last Updated: January 2026</strong></p>
+        <p>By using Kerex Nigeria Limited's services, you agree to these Terms of Service. Please read them carefully.</p>
+        
+        <h3>Our Services</h3>
+        <p>Kerex Nigeria Limited provides the following services for the oil and gas industry:</p>
+        <ul>
+          <li>Manpower recruitment and supply (skilled and unskilled labor)</li>
+          <li>Technical services and operational support</li>
+          <li>Training and professional development programs</li>
+          <li>HR consulting and workforce management</li>
+          <li>Background checks and verification services</li>
+          <li>Payroll and pension administration</li>
+        </ul>
+        
+        <h3>User Responsibilities</h3>
+        <p>Users and clients must:</p>
+        <ul>
+          <li>Provide accurate and complete information</li>
+          <li>Comply with all applicable Nigerian laws and regulations</li>
+          <li>Adhere to industry safety standards (HSE)</li>
+          <li>Maintain confidentiality of proprietary information</li>
+          <li>Honor all contractual obligations</li>
+        </ul>
+        
+        <h3>Service Availability</h3>
+        <p>All services are subject to availability and compliance with:</p>
+        <ul>
+          <li>Department of Petroleum Resources (DPR) regulations</li>
+          <li>Nigerian Petroleum Exchange (NIPEX) requirements</li>
+          <li>Federal Ministry of Labour standards</li>
+          <li>Client-specific contractual terms</li>
+        </ul>
+        
+        <h3>Limitation of Liability</h3>
+        <p>Kerex Nigeria Limited is not liable for indirect or consequential damages arising from the use of our services, except where required by law. Our liability is limited to the fees paid for the specific service in question.</p>
+        
+        <h3>Termination</h3>
+        <p>Either party may terminate services with written notice subject to contractual terms and regulatory requirements.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="whistleblowing-modal" class="modal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2>Whistleblowing Policy</h2>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </header>
+      <div class="modal-body">
+        <p><strong>Last Updated: January 2026</strong></p>
+        <p>Kerex Nigeria Limited is committed to maintaining the highest standards of integrity, transparency, and ethical conduct. This Whistleblowing Policy provides a secure channel for reporting concerns without fear of retaliation.</p>
+        
+        <h3>What Can Be Reported</h3>
+        <p>Employees, contractors, and stakeholders are encouraged to report concerns about:</p>
+        <ul>
+          <li>Unethical behavior or misconduct</li>
+          <li>Fraud, theft, or financial irregularities</li>
+          <li>Safety violations or HSE breaches</li>
+          <li>Regulatory non-compliance (DPR, NIPEX, etc.)</li>
+          <li>Corruption, bribery, or kickbacks</li>
+          <li>Discrimination or harassment</li>
+          <li>Conflict of interest</li>
+          <li>Any other illegal or unethical activities</li>
+        </ul>
+        
+        <h3>How to Report</h3>
+        <p>Reports can be made confidentially through:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:whistleblower@kerex.ng">whistleblower@kerex.ng</a></li>
+          <li><strong>Phone:</strong> Dedicated hotline (contact HR for number)</li>
+          <li><strong>In Person:</strong> Schedule confidential meeting with HR Director</li>
+          <li><strong>Anonymous:</strong> Reports can be submitted without revealing identity</li>
+        </ul>
+        
+        <h3>Protection & Confidentiality</h3>
+        <p>Kerex Nigeria Limited guarantees:</p>
+        <ul>
+          <li>Protection against retaliation for all whistleblowers reporting in good faith</li>
+          <li>Confidential handling of all reports</li>
+          <li>Independent investigation of all credible reports</li>
+          <li>Regular updates on investigation progress (where appropriate)</li>
+          <li>No disciplinary action for good faith reporting</li>
+        </ul>
+        
+        <h3>Investigation Process</h3>
+        <p>All reports are:</p>
+        <ul>
+          <li>Documented and assigned to an independent investigator</li>
+          <li>Investigated promptly and thoroughly</li>
+          <li>Reviewed by senior management and legal counsel</li>
+          <li>Addressed with appropriate corrective actions</li>
+        </ul>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="contact-modal" class="modal contact-modal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2>Contact Us</h2>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </header>
+      <div class="modal-body contact-body">
+        <div class="contact-methods">
+          <a href="tel:+234800KEREXNG" class="contact-method">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+              <h3>Phone Call</h3>
+              <p>+234-800-KEREX-NG</p>
+            </div>
+          </a>
+          <a href="https://wa.me/234800KEREXNG" target="_blank" rel="noopener noreferrer" class="contact-method">
+            <div class="contact-icon">💬</div>
+            <div class="contact-info">
+              <h3>WhatsApp</h3>
+              <p>Chat with us</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send Message</h3>
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="support-modal" class="modal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2>Support</h2>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </header>
+      <div class="modal-body">
+        <h3>Contact Us</h3>
+        <p><strong>Email:</strong> <a href="mailto:info@kerex.ng">info@kerex.ng</a></p>
+        <p><strong>Phone:</strong> +234-800-KEREX-NG</p>
+        <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#jobs">Job Board</a></li>
+          <li><a href="#training">Training Programs</a></li>
+        </ul>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

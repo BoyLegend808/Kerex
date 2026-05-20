@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-    // Close menu when clicking a link
-    mobileNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
+    // Close menu when clicking a link or button
+    mobileNav.querySelectorAll("a, button").forEach((element) => {
+      element.addEventListener("click", () => {
         mobileNav.classList.remove("is-open");
         menuToggle.setAttribute("aria-expanded", "false");
       });
@@ -65,6 +65,52 @@ document.addEventListener("DOMContentLoaded", () => {
       if (href !== "#" && document.querySelector(href)) {
         e.preventDefault();
         document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  // Modal Dialog Functionality
+  const modalTriggers = document.querySelectorAll(".modal-trigger");
+  const modals = document.querySelectorAll(".modal");
+  const modalCloseButtons = document.querySelectorAll(".modal-close");
+
+  // Open modals
+  modalTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const modalId = trigger.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.showModal();
+        document.body.style.overflow = "hidden";
+      }
+    });
+  });
+
+  // Close modals with close button
+  modalCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".modal");
+      modal.close();
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Close modals when clicking backdrop
+  modals.forEach((modal) => {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.close();
+        document.body.style.overflow = "";
+      }
+    });
+  });
+
+  // Close modals with Escape key
+  modals.forEach((modal) => {
+    modal.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        modal.close();
+        document.body.style.overflow = "";
       }
     });
   });
