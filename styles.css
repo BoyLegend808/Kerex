@@ -1096,6 +1096,22 @@ button {
   margin-bottom: 1.5rem;
 }
 
+.footer-contact {
+  margin-bottom: 1.5rem;
+}
+
+.footer-phone {
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+.footer-address {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
