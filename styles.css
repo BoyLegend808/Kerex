@@ -16,6 +16,8 @@
   --text-light: #3f4a3a;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -29,10 +31,14 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.6;
   color: var(--text-dark);
   background: var(--gray-100);
+}
+
+h1, h2, h3, h4, h5, h6, .logo, .btn-primary, .btn-hero-primary, .btn-hero-outline {
+  font-family: var(--font-display);
 }
 
 img {
@@ -170,17 +176,22 @@ button {
   border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 600;
-  transition: background 0.2s;
-}
-
-.btn-contact {
-  padding: 0.75rem 2.5rem;
-  font-size: 0.95rem;
-  min-width: 140px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover {
   background: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 138, 0, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
 
 /* Mobile Navigation */
@@ -303,11 +314,20 @@ button {
   padding: 1rem 2rem;
   border-radius: 6px;
   font-weight: 600;
-  transition: box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-hero-primary:hover {
-  box-shadow: var(--shadow-lg);
+  background: var(--green-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 138, 0, 0.3);
+}
+
+.btn-hero-primary:active {
+  transform: translateY(0);
 }
 
 .btn-hero-outline {
@@ -316,10 +336,21 @@ button {
   padding: 1rem 2rem;
   border-radius: 6px;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-hero-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--white);
+  color: var(--text-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.btn-hero-outline:active {
+  transform: translateY(0);
 }
 
 .scroll-hint {
@@ -413,12 +444,12 @@ button {
 .bento-card {
   padding: 2rem;
   border-radius: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bento-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .bento-stat {
@@ -759,12 +790,14 @@ button {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: var(--shadow);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--gray-300);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .job-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--green);
 }
 
 .job-card h3 {
@@ -812,12 +845,13 @@ button {
   border-radius: 8px;
   border: 1px solid var(--gray-300);
   box-shadow: var(--shadow);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .training-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--green);
 }
 
 .training-card h3 {
@@ -967,13 +1001,23 @@ button {
   border: 1px solid var(--gray-300);
   border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-method:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   border-color: var(--green);
+}
+
+div.contact-location-card {
+  cursor: default;
+}
+
+div.contact-location-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--gray-300);
 }
 
 .contact-icon {
